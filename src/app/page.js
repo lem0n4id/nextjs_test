@@ -1,95 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <>
+      <style>
+        {`
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: rgb(95, 181, 218);
+          box-sizing: border-box;
+          text-align: center;
+          background-image: url(/1.png);
+        }
+
+        h1 {
+          color: #000000;
+          margin-top: 50px; /* Adjust the margin as needed */
+        }
+
+        div {
+          width: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 250px; /* Makes the container take the full viewport height */
+          margin-top: 150px;
+          margin-left: 500px;
+          background-color: rgb(243, 244, 215);
+          border-radius: 10px;
+          box-shadow: 5px 5px 5px 5px rgb(29, 111, 146);
+        }
+
+        button {
+          height: 200px;
+          width: 200px;
+          margin: 10px;
+          padding: 10px 20px;
+          font-size: 16px;
+          text-decoration: none;
+          color: #dee856;
+          background-color: rgb(137, 228, 67);
+          border: none;
+          border-radius: 5px;
+          box-shadow: 20px black;
+          box-shadow: 2px 2px 2px 2px rgb(106, 104, 104);
+        }
+
+        Link {
+          margin-top: 100px;
+          margin-top: 200px;
+          text-decoration: none;
+          color: #fff;
+        }
+        `}
+      </style>
+      <h1>STUDENT - TEACHER PORTAL</h1>
+      <div>
+        <Link href="/trreg"><button><span style={{ color: 'white' }}>TEACHER REGISTRATION</span></button></Link>
+        <Link href="/stureg"><button><span style={{ color: 'white' }}>STUDENT REGISTRATION</span></button></Link>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
